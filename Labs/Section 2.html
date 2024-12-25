@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Joseph Lotfy -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    text-align: left;
+}
+
+caption {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+th, td {
+    border: 1px solid blue;
+    padding: 8px;
+}
+
+th {
+    font-weight: bold;
+}
+.styled-table tr, .styled-table th, .styled-table td {
+  border-color: white;
+}
+.word-table {
+    border-collapse: collapse;
+    width: auto;
+    border: 1px solid black;
+}
+
+.word-table td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>First</th>
+                <th>Second</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ahmed</td>
+                <td>Ali</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Mohamed</td>
+                <td>Ibrahim</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>Mostafa</td>
+                <td>Amin</td>
+                <td>12</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table>
+      <caption>This is caption</caption>
+      <thead>
+          <tr>
+              <th></th>
+              <th>Second</th>
+              <th>Age</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <th>Ahmed</th>
+              <td>Ali</td>
+              <td>10</td>
+          </tr>
+          <tr>
+              <th>Mohamed</th>
+              <td>Ibrahim</td>
+              <td>11</td>
+          </tr>
+          <tr>
+              <th>Mostafa</th>
+              <td>Amin</td>
+              <td>12</td>
+          </tr>
+      </tbody>
+  </table>
+  <hr>
+  <table class="styled-table" style="background-color: blueviolet;">
+    <caption>This is caption</caption>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Second</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Ahmed</th>
+            <td>Ali</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <th>Mohamed</th>
+            <td>Ibrahim</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <th>Mostafa</th>
+            <td>Amin</td>
+            <td>12</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<table class="styled-table" style="background-color: blueviolet;">
+  <caption>This is caption</caption>
+  <thead>
+      <tr>
+          <th>First</th>
+          <th>Second</th>
+          <th>Age</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Ahmed</td>
+          <td>Ali</td>
+          <td>10</td>
+      </tr>
+      <tr>
+          <td>Mohamed</td>
+          <td>Ibrahim</td>
+          <td>11</td>
+      </tr>
+      <tr>
+          <td>Mostafa</td>
+          <td>Amin</td>
+          <td>12</td>
+      </tr>
+      <tr>
+          <td colspan="2" class="total">Total</td>
+          <td>33</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+
+<table class="custom-table">
+  <tr>
+      <td>Quick</td>
+      <td>brown fox</td>
+      <td>jumps</td>
+      <td>lazy</td>
+  </tr>
+  <tr>
+      <td rowspan="3">over the</td>
+      <td>lazy</td>
+      <td>dog</td>
+      <td>and</td>
+  </tr>
+  <tr>
+      <td>then</td>
+      <td>it</td>
+      <td>fall</td>
+  </tr>
+  <tr>
+      <td colspan="3">prey to a lion</td>
+
+  </tr>
+</table>
+</body>
+</html>

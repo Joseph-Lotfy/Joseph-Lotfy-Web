@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-image: linear-gradient(140deg, #bbf, #f9f, #bbf, #f8f);
+            padding: 0 30px 300px 30px;
+        }
+        .main-heading {
+            text-align: center;
+            color: #000;
+            font-weight: bolder;
+            text-shadow: 0 0 10px blue, 0 0 10px red;
+            font-size: 5vw;
+        }
+        hr {
+            border: #444 solid 3px;
+            margin: 100px 0;
+        }
+        .styled-button {
+            margin: auto;
+            border: #dd63ff solid 3px;
+            background-color: aquamarine;
+            display: inline-block;
+            width: fit-content;
+        }
+        img {
+            margin: auto;
+            display: block;
+        }
+        .content-container {
+            margin: 50px 0 200px 0;
+            border: 1px solid black;
+            padding: 50px;
+            min-width: 80vw;
+            min-height: 200px;
+            display: block;
+        }
+        .section-dom {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: darkolivegreen;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .section-dom h1 {
+            margin: 0;
+            color: olive;
+            font-size: 36px;
+        }
+        .section-dom div {
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        #elementToBeRemoved {
+            color: red;
+        }
+        .section-dom button {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+            padding: 20px;
+            margin-top: 20px;
+            outline: none;
+            font-size: 18px;
+            border-radius: 4px;
+            border: none;
+            color: white;
+
+            background-color: darkolivegreen;
+        }
+        .section-dom button:hover {
+            background-color: olive;
+        }
+        .section-temp {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: dodgerblue;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .section-temp h1 {
+            margin-top: 0;
+            color: deepskyblue;
+            font-size: 36px;
+        }
+        .section-temp div {
+            padding: 50px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        .section-temp label, .section-temp p {
+            font-size: 18px;
+            
+        }
+        .section-temp input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            
+            font-size: 18px;
+            border-radius: 4px;
+            margin-top: 10px;
+            border: 1px solid deepskyblue;
+        }
+        .section-temp button {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+            padding: 10px;
+            margin-top: 20px;
+            outline: none;
+            font-size: 18px;
+            border-radius: 4px;
+            border: none;
+            color: white;
+            font-weight: 600;
+            background-color: dodgerblue;
+        }
+        .section-temp button:hover {
+            background-color: deepskyblue;
+        }
+        .section-fruits {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: mediumseagreen;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .section-fruits h1 {
+            margin: 0;
+            color: darkgreen;
+            font-size: 36px;
+        }
+        .section-fruits div {
+            padding: 50px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        .section-fruits ul {
+            padding: 0;
+            font-size: 26px;
+            margin: 20px 60px;
+            
+            color: darkolivegreen;
+        }
+        .section-fruits input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            outline: none;
+            font-weight: 600;
+            font-size: 18px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            color: darkolivegreen;
+            border: 1px solid mediumseagreen;
+        }
+        .section-fruits input::placeholder {
+            color: darkolivegreen;
+        }
+        .section-fruits button {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+            padding: 10px;
+            outline: none;
+            font-size: 18px;
+            border-radius: 4px;
+            border: none;
+            color: white;
+            font-weight: 600;
+            background-color: seagreen;
+        }
+        .section-fruits button:hover {
+            background-color: mediumseagreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-heading">SEC7</div>
+    <hr>
+    <div class="section-dom">
+        <div id="id1">
+            <h1>JavaScript DOM Manipulation</h1>
+            <h2 id="contentToBeUpdated">Original Text Content.</h2>
+            <button id="updateContentButton">Update content</button>
+            <h2 id="stylesToBeUpdated">Original Styles.</h2>
+            <button id="updateStylesButton">Update content and styles</button>
+            <h2 id="elementToBeRemoved">Remove This Element!</h2>
+            <button id="removeElementButton">Remove element</button>
+        </div>
+    </div>
+    <hr>
+    <div class="section-temp">
+        <div>
+            <h1>Temperature converter</h1>
+            <label for="temperatureInput">Enter the temperature:</label>
+            <input id="temperature" placeholder="Enter the temperature degree" />
+            <button id="celsiusToFahrenheitButton">Convert to Fahrenheit</button>
+            <button id="fahrenheitToCelsiusButton">Convert to Celsius</button>
+            <p id="conversionResult"></p>
+        </div>
+    </div>
+    <hr>
+    <div class="section-fruits">
+        <div>
+            <h1>Fruits list</h1>
+            <ul id="FruitList"></ul>
+            <input id="fruitInput" placeholder="Enter a fruit name" />
+            <button id="fruitButton">Add to the list</button>
+        </div>
+    </div>
+    <script>
+        const parentContainer = document.getElementById('id1');
+const updateContentButtonElement = document.getElementById('updateContentButton');
+updateContentButtonElement.addEventListener('click', function () {
+    const element = document.getElementById('contentToBeUpdated');
+    element.textContent = 'New Text Content';
+});
+
+const updateStylesButtonElement = document.getElementById('updateStylesButton');
+updateStylesButtonElement.addEventListener('click', function () {
+    const element = document.getElementById('stylesToBeUpdated');
+    element.style.color = 'red';
+    element.style.backgroundColor = 'yellow';
+    element.style.border = '2px solid red';
+    element.style.padding = '5px';
+    element.textContent = 'New Styles Added!';
+});
+
+const removeElementButtonElement = document.getElementById('removeElementButton');
+removeElementButtonElement.addEventListener('click', function () {
+    const element = document.getElementById('elementToBeRemoved');
+    element.remove();
+});
+
+////////////////////////////////////////////////////////////////
+
+const temperatureInputElement = document.getElementById('temperature');
+const celsiusToFahrenheitButtonElement = document.getElementById('celsiusToFahrenheitButton');
+celsiusToFahrenheitButtonElement.addEventListener('click', function () {
+    const resultElement = document.getElementById('conversionResult');
+    const celsius = temperatureInputElement.value;
+    const fahrenheit = (9 / 5) * celsius + 32;
+    const isResultNaN = isNaN(fahrenheit);
+    if (isResultNaN || celsius === '') {
+        resultElement.style.color = 'red';
+        resultElement.innerText = 'Please enter a number!';
+    } else {
+        resultElement.style.color = 'unset';
+        resultElement.innerText = `${celsius} Celsius is equivalent to ${fahrenheit.toFixed(1)} Fahrenheit.`;
+    }
+});
+const fahrenheitToCelsiusButtonElement = document.getElementById('fahrenheitToCelsiusButton');
+fahrenheitToCelsiusButtonElement.addEventListener('click', function () {
+    const resultElement = document.getElementById('conversionResult');
+    const fahrenheit = temperatureInputElement.value;
+    const celsius = (5 / 9) * (fahrenheit - 32);
+    const isResultNaN = isNaN(fahrenheit);
+    if (isResultNaN || fahrenheit === '') {
+        resultElement.style.color = 'red';
+        resultElement.innerText = 'Please enter a number!';
+    } else {
+        resultElement.style.color = 'unset';
+        resultElement.innerText = `${fahrenheit} Fahrenheit is equivalent to ${celsius.toFixed(1)} Celsius.`;
+    }
+});
+
+
+////////////////////////////////////////////////////////////////
+
+const fruitsList = ['Apples', 'Banana'];
+const fruitsListElement = document.getElementById('FruitList');
+fruitsList.forEach((fruit) => {
+    const listItemElement = document.createElement('li');
+    listItemElement.textContent = fruit;
+    fruitsListElement.appendChild(listItemElement);
+});
+const fruitInputElement = document.getElementById('fruitInput');
+const addFruitButtonElement = document.getElementById('fruitButton');
+addFruitButtonElement.addEventListener('click', function () {
+    const listItemElement = document.createElement('li');
+    listItemElement.innerText = fruitInputElement.value;
+    fruitsListElement.appendChild(listItemElement);
+    fruitInputElement.value = '';
+});
+
+    </script>
+</body>
+</html>

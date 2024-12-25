@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(255, 240, 240);
+    padding: 0 30px 300px 30px;
+}
+li{
+    /* color: #b5b572; */
+    /* list-style-type: lower-greek */
+}
+h1{
+    color: blue;
+    text-align: center;
+}
+.center{
+    text-align: center;
+    color: red;
+}
+.border{
+    border: 1px solid black;
+    padding: 10px;
+}
+article > p{
+    text-align: center;
+    color: rgb(0, 85, 255);
+}
+.red{
+    color: red;
+}
+.center{
+    color: blue;
+}

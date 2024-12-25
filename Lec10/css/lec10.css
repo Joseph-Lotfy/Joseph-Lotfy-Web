@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    font-family: serif;
+}
+:root{
+    --main-color: #dd63ff;
+    --secondary-color: #7979f6;
+    --mark-color: #ff7;
+    --main-delay: 0.3s;
+    --padding-value: 45px;
+    --dur: 10s;
+}
+body{
+    background-image: linear-gradient(140deg, #ccf,#fbf,#ccf,#fbf);
+    padding: 0 30px 300px 30px;
+}
+.heading{
+    text-align: center;
+    color: #000;
+    font-weight: bolder;
+    text-shadow: 0 0 10px blue,0 0 10px red;
+    font-size: 5vw;
+    /* background-color: tomato; */
+}
+/* class container */
+.container{
+    padding: 50px 50px 50px 50px;
+    border: 1px solid black;
+}
+.my-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+hr{
+    border: #444 solid 3px;
+    margin: 100px 0 100px 0;
+}
+button{
+    width: 150px;
+    height: 80px;
+    background-color: rgb(174, 139, 255);
+    box-shadow: 0 0 10px red,0 0 10px blue;
+    color: black;
+    display: inline-block;
+    font-size: 25px;
+    transition: 0.5s;
+}
+button:active{
+    font-size: 15px;
+}

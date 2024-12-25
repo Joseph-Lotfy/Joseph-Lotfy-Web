@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Joseph Lotfy -->
+    <link rel="stylesheet" href="css/sec5.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            padding: 0 30px 300px 30px;
+        }
+        .heading {
+            text-align: center;
+            color: #000;
+            font-weight: bolder;
+            text-shadow: 0 0 10px blue, 0 0 10px red;
+            font-size: 5vw;
+        }
+
+        .button {
+            margin: auto;
+            border: #dd63ff solid 3px;
+            background-color: aquamarine;
+            display: inline-block;
+            width: fit-content;
+        }
+        img {
+            margin: auto;
+            display: block;
+        }
+        .content-container {
+            margin: 50px 0 200px 0;
+            border: 1px solid black;
+            padding: 50px;
+            min-width: 80vw;
+            min-height: 100vh;
+            display: block;
+        }
+
+        .styled-box {
+            width: 300px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: White;
+            color: red;
+            font-weight: bolder;
+            text-align: center;
+            font-size: 48px;
+            line-height: 4;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+
+        .styled-box::after {
+            content: "";
+            position: absolute;
+            width: 313px;
+            height: 208px;
+            background-color: black;
+            z-index: -1;
+            left: -7px;
+            top: -4px;
+            transform: rotate(-7deg);
+        }
+
+        .styled-box::before {
+            content: "";
+            position: absolute;
+            width: 314px;
+            height: 212px;
+            background-color: red;
+            z-index: -2;
+            left: -8px;
+            top: -7px;
+            transform: rotate(6deg);
+        }
+
+        .rotating-circle {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            line-height: 6.5;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: -3px solid #ccc;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .rotating-circle::before {
+            content: "";
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: -10px;
+            z-index: -2;
+            border-right: 10px solid black;
+            border-top: 10px solid black;
+            border-bottom: 10px solid black;
+            border-left: 10px solid white;
+            transition: 0.5s;
+        }
+
+        .rotating-circle::after {
+            content: "";
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            position: absolute;
+            left: -18px;
+            top: -20px;
+            z-index: -3;
+            border-left: 10px solid red;
+            border-top: 10px solid red;
+            border-bottom: 10px solid red;
+            border-right: 10px solid white;
+            transition: 0.5s;
+        }
+
+        .rotating-circle:hover::before {
+            transform: rotate(180deg);
+        }
+
+        .rotating-circle:hover::after {
+            transform: rotate(-180deg);
+        }
+
+        .skew-box h1 {
+            width: 150px;
+            margin: 100px auto;
+            color: #FFF;
+            background-color: #ff5722;
+            padding: 20px;
+            z-index: 1;
+            font-size: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .skew-box h1::before {
+            content: "";
+            background-color: #ff5722;
+            z-index: -1;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: skew(10deg, 12deg);
+        }
+
+        .skew-box h1::after {
+            content: "";
+            background-color: #ff5722;
+            z-index: -1;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: skew(-10deg, -12deg);
+        }
+
+        .outlined-box h1 {
+            width: 150px;
+            margin: 50px auto;
+            background-color: #009688;
+            color: #FFF;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .outlined-box h1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -15px;
+            width: 28px;
+            height: 100%;
+            background-color: #FFF;
+            z-index: 1;
+            transform: skewX(18deg);
+        }
+
+        .outlined-box h1::after {
+            content: "";
+            position: absolute;
+            background-color: #009688;
+            width: 17px;
+            top: 0;
+            left: -15px;
+            transform: skewX(17deg);
+            z-index: 1;
+            height: 100%;
+        }
+
+        .folded-paper div {
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            background-color: #607d8b;
+            position: relative;
+            border-bottom: 5px solid #000;
+            z-index: -1;
+        }
+
+        .folded-paper div::before {
+            content: "";
+            width: 96px;
+            height: 100px;
+            position: absolute;
+            top: -51px;
+            left: 44px;
+            transform: matrix(1, 1, 1, -1, 6, 0);
+            z-index: 1;
+            background-color: #000;
+            border-right: 4px solid #fff;
+            border-top: 4px solid #fff;
+        }
+
+        .folded-paper div::after {
+            content: "Sheet";
+            font-family: sans-serif;
+            color: #fff;
+            font-size: 20px;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .flipping-card {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            text-align: center;
+            line-height: 5.5;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+
+        .flipping-card::before {
+            content: "Front";
+            width: 200px;
+            height: 200px;
+            background-color: #fa3664;
+            font-size: 35px;
+            color: #fff;
+            backface-visibility: hidden;
+            z-index: 1;
+        }
+
+        .flipping-card::after {
+            content: "Back";
+            width: 200px;
+            height: 200px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            color: #fff;
+            font-size: 35px;
+            z-index: -1;
+            background-color: #00a3cc;
+            position: absolute;
+            top: 0;
+            transform: rotateY(-180deg);
+        }
+
+        .flipping-card:hover {
+            transform: rotateY(-180deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="heading">SEC5</div>
+    <hr>
+    <div class="content-container">
+        <div class="styled-box">Web Sheet</div>
+    </div>
+
+    <hr>
+    <div class="content-container">
+        <div class="rotating-circle">Sheet 5</div>
+    </div>
+
+    <hr>
+    <div class="content-container">
+        <div class="skew-box">
+            <h1>Sheet</h1>
+        </div>
+    </div>
+    <hr>
+    <div class="content-container" style="background-color: white;">
+        <div class="outlined-box">
+            <h1>Sheet</h1>
+        </div>
+    </div>
+    <hr>
+
+    <div class="content-container">
+        <div class="folded-paper">
+            <div>Sheet</div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="content-container">
+        <div class="flipping-card"></div>
+    </div>
+    <hr>
+</body>
+</html>

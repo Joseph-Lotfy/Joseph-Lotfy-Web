@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+        background-image: url('back1.jpg');;
+        }
+        header{
+            background-image: url('back2.jpg');
+    background-repeat: repeat-x;
+        }
+        p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+p.one { border-style: solid; border-width: 5px;}
+p.two { border-style: solid; border-width: medium;}
+p.three { border-style: dotted; border-width: 2px;}
+p.four { border-style: dotted; border-width: thick;}
+p.five { border-style: double; border-width: 15px;}
+p.six { border-style: double; border-width: thick;}
+p.one { border-style: solid; border-color: red;}
+p.two { border-style: solid; border-color: green;}
+p.three { border-style: dotted; border-color: blue;}
+#example1 {
+background-image: url("google.png"), url("back2.jpg");
+background-position: right bottom, left top;
+background-repeat: no-repeat, repeat;
+padding: 15px;
+}
+.shadow {
+width: 300px;
+height: 100px;
+padding: 15px;
+background-color: blue;
+box-shadow: 10px 10px;
+}
+    </style>
+</head>
+<body>
+    <h1>HSL Lightness</h1>
+    <p>The third parameter of hsl() defines the lightness. 0% means black, and 100% means white:</p>
+    <h2 style="background-color:hsl(0, 100%, 0%);">hsl(0, 100%, 0%)</h2>
+    <h2 style="background-color:hsl(0, 100%, 25%);">hsl(0, 100%, 25%)</h2>
+    <h2 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h2>
+    <h2 style="background-color:hsl(0, 100%, 75%);">hsl(0, 100%, 75%)</h2>
+    <h2 style="background-color:hsl(0, 100%, 90%);">hsl(0, 100%, 90%)</h2>
+    <h2 style="background-color:hsl(0, 100%, 100%);">hsl(0, 100%, 100%)</h2>
+    <hr>
+    <p style="color:#FF6347;">First paragraph</p>
+    <p style="color:#1E90FF;">Second paragraph</p>
+    <p style="color:#3CB371;">Third paragraph</p>
+    <hr>
+    <p style="color:rgba(255, 0, 0, 1)">Transparency 1</p>
+    <p style="color:rgba(255, 0, 0, 0.8)">Transparency 0.8</p>
+    <p style="color:rgba(255, 0, 0, 0.6)">Transparency 0.6</p>
+    <p style="color:rgba(255, 0, 0, 0.4)">Transparency 0.4</p>
+    <p style="color:rgba(255, 0, 0, 0.2)">Transparency 0.2</p>
+    <hr>
+    <header>
+        <h1>Image repeated horizontally</h1>
+        <p>"repeat-x" make the background image repeat itself horizontaly.</p>
+
+        <br>
+    </header>
+    <hr>
+    <p class="dotted">A dotted border.</p>
+    <p class="dashed">A dashed border.</p>
+    <p class="solid">A solid border.</p>
+    <p class="double">A double border.</p>
+    <p class="groove">A groove border.</p>
+    <p class="ridge">A ridge border.</p>
+    <p class="inset">An inset border.</p>
+    <p class="outset">An outset border.</p>
+    <p class="none">No border.</p>
+    <p class="hidden">A hidden border.</p>
+    <p class="mix">A mixed border.</p>
+    <hr>
+    <p class="one">Some text.</p>
+    <p class="two">Some text.</p>
+    <p class="three">Some text.</p>
+    <p class="four">Some text.</p>
+    <p class="five">Some text.</p>
+    <p class="six">Some text.</p>
+    <hr>
+    <p class="one">A solid red border</p>
+<p class="two">A solid green border</p>
+<p class="three">A dotted blue border</p>
+
+<div id="example1">
+    <h1>Lorem Ipsum Dolor</h1>
+    <p>A smartphone is a cellular telephone with an integrated computer and other features not
+    originally associated with telephones, such as an operating system (OS).</p>
+    <p>Smartphones are used by consumers and as part of a person's business or work.</p>
+</div>
+<hr>
+<div class="shadow">This is a div element with a box-shadow</div>
+</body>
+</html>
